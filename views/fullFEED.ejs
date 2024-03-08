@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    body{
+        background-color: rgb(169, 135, 67);
+        
+    }
+    h3{
+        color: #2606a8;
+        background-color: rgb(147, 115, 80);
+        font-size: larger;
+        border: 20px;
+        border-radius: 10px;
+        margin-left: 120px;
+        margin-right: 120px;
+        padding-left: 10px;
+    }
+    p{
+        color: black;
+        background-color: rgb(81, 110, 135);
+        border: 20px;
+        border-radius: 10px;
+        margin-left: 120px;
+        margin-right: 120px;
+        padding-left: 10px;
+      
+        
+    }
+</style>
+
+<body>
+    <a href="/">Home</a>
+
+    <div> <h3><%= feed.name %></h3>
+        <p><%= feed.massage %></p>
+        <p><%= feed.created_at %></p></div>
+
+        <form action="/delete-feed/<%=feed.id %>" method="post">
+            <button>Delete</button>
+
+        </form>
+        <a href="/update-feed/<%=feed.id %>">Edit</a>
+      
+</body>
+</html>
